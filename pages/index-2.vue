@@ -59,7 +59,6 @@
         console.log(error)
         const strapi = new Strapi('http://localhost:1337/api');
         const blogs = await strapi.getEntries('blogs');  // 获取博客列表数据
-        console.log(blogs.data)
         return { blogs:blogs.data };  // 返回获取的数据
       } catch (err) {
         console.error('Strapi API 请求失败:', err);

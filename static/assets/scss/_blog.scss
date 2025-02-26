@@ -150,6 +150,9 @@
         font-weight: 500;
         line-height: 1.2em;
         margin-bottom: 28px;
+        white-space: nowrap;
+        overflow: hidden;
+        letter-spacing: inherit;
     }
 
     .blog-one__content {
