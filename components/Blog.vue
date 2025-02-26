@@ -15,9 +15,9 @@
                 <li><a href="#">2 Comments</a></li>
               </ul><!-- /.list-unstyled -->
               <h3 class="blog-one__title">
-                <nuxt-link to="/blog-details">Pre and post launch mobile app marketing pitfalls to avoid</nuxt-link>
+                <nuxt-link to="/pages/blog-details/_slug">Pre and post launch mobile app marketing pitfalls to avoid</nuxt-link>
               </h3><!-- /.blog-one__title -->
-              <nuxt-link to="/blog-details" class="blog-one__link">Read More</nuxt-link><!-- /.blog-one__link -->
+              <nuxt-link to="/pages/blog-details/_slug" class="blog-one__link">Read More</nuxt-link><!-- /.blog-one__link -->
             </div><!-- /.blog-one__content -->
           </div><!-- /.blog-one__single -->
         </div><!-- /.col-lg-4 -->
@@ -34,10 +34,10 @@
                 <li><a href="#">2 Comments</a></li>
               </ul><!-- /.list-unstyled -->
               <h3 class="blog-one__title">
-                <nuxt-link to="/blog-details">It is all exactly as i said, but i don't like it let's unpack
+                <nuxt-link to="/pages/blog-details/_slug">It is all exactly as i said, but i don't like it let's unpack
                   that</nuxt-link>
               </h3><!-- /.blog-one__title -->
-              <nuxt-link to="/blog-details" class="blog-one__link">Read More</nuxt-link><!-- /.blog-one__link -->
+              <nuxt-link to="/pages/blog-details/_slug" class="blog-one__link">Read More</nuxt-link><!-- /.blog-one__link -->
             </div><!-- /.blog-one__content -->
           </div><!-- /.blog-one__single -->
         </div><!-- /.col-lg-4 -->
@@ -54,10 +54,10 @@
                 <li><a href="#">2 Comments</a></li>
               </ul><!-- /.list-unstyled -->
               <h3 class="blog-one__title">
-                <nuxt-link to="/blog-details">I just wanted to give you a heads-up, or this you feel you
+                <nuxt-link to="/pages/blog-details/_slug">I just wanted to give you a heads-up, or this you feel you
                   would</nuxt-link>
               </h3><!-- /.blog-one__title -->
-              <nuxt-link to="/blog-details" class="blog-one__link">Read More</nuxt-link><!-- /.blog-one__link -->
+              <nuxt-link to="/pages/blog-details/_slug" class="blog-one__link">Read More</nuxt-link><!-- /.blog-one__link -->
             </div><!-- /.blog-one__content -->
           </div><!-- /.blog-one__single -->
         </div><!-- /.col-lg-4 -->
@@ -74,9 +74,9 @@
                 <li><a href="#">2 Comments</a></li>
               </ul><!-- /.list-unstyled -->
               <h3 class="blog-one__title">
-                <nuxt-link to="/blog-details">A loss a day will keep you focus run it up the flagpole</nuxt-link>
+                <nuxt-link to="/pages/blog-details/_slug">A loss a day will keep you focus run it up the flagpole</nuxt-link>
               </h3><!-- /.blog-one__title -->
-              <nuxt-link to="/blog-details" class="blog-one__link">Read More</nuxt-link><!-- /.blog-one__link -->
+              <nuxt-link to="/pages/blog-details/_slug" class="blog-one__link">Read More</nuxt-link><!-- /.blog-one__link -->
             </div><!-- /.blog-one__content -->
           </div><!-- /.blog-one__single -->
         </div><!-- /.col-lg-4 -->
@@ -93,7 +93,7 @@
                 <li><a href="#">2 Comments</a></li>
               </ul><!-- /.list-unstyled -->
               <h3 class="blog-one__title">
-                <nuxt-link to="/blog-details">We've got to manage that low hanging fruit here to wash
+                <nuxt-link to="/pages/blog-details/_slug">We've got to manage that low hanging fruit here to wash
                   your</nuxt-link>
               </h3><!-- /.blog-one__title -->
               <a href="news-details.html" class="blog-one__link">Read More</a><!-- /.blog-one__link -->
@@ -113,9 +113,9 @@
                 <li><a href="#">2 Comments</a></li>
               </ul><!-- /.list-unstyled -->
               <h3 class="blog-one__title">
-                <nuxt-link to="/blog-details">Paddle on both sides cross functional teams enable out</nuxt-link>
+                <nuxt-link to="/pages/blog-details/_slug">Paddle on both sides cross functional teams enable out</nuxt-link>
               </h3><!-- /.blog-one__title -->
-              <nuxt-link to="/blog-details" class="blog-one__link">Read More</nuxt-link><!-- /.blog-one__link -->
+              <nuxt-link to="/pages/blog-details/_slug" class="blog-one__link">Read More</nuxt-link><!-- /.blog-one__link -->
             </div><!-- /.blog-one__content -->
           </div><!-- /.blog-one__single -->
         </div><!-- /.col-lg-4 -->

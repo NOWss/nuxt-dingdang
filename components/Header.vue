@@ -18,7 +18,7 @@
               <a href="#">Home</a>
               <ul class="sub-menu">
                 <li><a href="/">Home 01</a></li>
-                <li><a href="/index-2">Home 02</a></li>
+                <li><a href="/pages">Home 02</a></li>
               </ul><!-- /.sub-menu -->
             </li>
             <li class="scrollToLink">
@@ -39,7 +39,7 @@
               <a href="#news">News</a>
               <ul class="sub-menu">
                 <li><nuxt-link to="/blog">News Page</nuxt-link></li>
-                <li><nuxt-link to="/blog-details">News Details</nuxt-link></li>
+                <li><nuxt-link to="/pages/blog-details/_slug">News Details</nuxt-link></li>
               </ul><!-- /.sub-menu -->
             </li>
           </ul>

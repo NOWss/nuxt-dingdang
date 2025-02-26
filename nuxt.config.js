@@ -1,5 +1,13 @@
+require('dotenv').config();
+const { from } = require('env-var');
+const env = from(process.env);
+
 export default {
   mode: 'universal',
+  // ✨ 注入公共环境变量到客户端
+  publicRuntimeConfig: {
+    API_BASE: env.get('NUXT_PUBLIC_API_BASE').required().asString(),
+  },
   /*
   ** Headers of the page
   */
@@ -88,5 +96,5 @@ export default {
         '@babel/plugin-proposal-optional-chaining'
       ]
     }
-  }
+  },
 }

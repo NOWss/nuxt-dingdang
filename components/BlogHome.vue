@@ -9,8 +9,8 @@
           <div class="blog-one__single">
             <div class="blog-one__image">
               <img src="/assets/images/blog/blog-1-1.jpg" alt="">
-              <a class="blog-one__more-link" href="news-details.html"><i class="fa fa-link"></i>
-                <!-- /.fa fa-link --></a>
+              <nuxt-link class="blog-one__more-link" :to="`/blog-details/${blog.attributes.slug}`"><i class="fa fa-link"></i>
+                <!-- /.fa fa-link --></nuxt-link>
             </div><!-- /.blog-one__image -->
             <div class="blog-one__content">
               <ul class="list-unstyled blog-one__meta">
@@ -18,9 +18,9 @@
 <!--                <li><a href="#">2 Comments</a></li>-->
               </ul><!-- /.list-unstyled -->
               <h3 class="blog-one__title" :title="blog.attributes.title">
-                <nuxt-link to="/blog-details">{{ blog.attributes.title }}</nuxt-link>
+                <nuxt-link :to="`/blog-details/${blog.attributes.slug}`">{{ blog.attributes.title }}</nuxt-link>
               </h3><!-- /.blog-one__title -->
-              <nuxt-link to="/blog-details" class="blog-one__link">了解更多</nuxt-link><!-- /.blog-one__link -->
+              <nuxt-link :to="`/blog-details/${blog.attributes.slug}`" class="blog-one__link">了解更多</nuxt-link><!-- /.blog-one__link -->
             </div><!-- /.blog-one__content -->
           </div><!-- /.blog-one__single -->
         </div ><!-- /.col-lg-4 -->
