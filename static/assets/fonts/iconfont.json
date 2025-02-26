@@ -1,0 +1,93 @@
+{
+  "id": "4833546",
+  "name": "叮当助手",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "3258075",
+      "name": "精选",
+      "font_class": "jingxuan",
+      "unicode": "e643",
+      "unicode_decimal": 58947
+    },
+    {
+      "icon_id": "281613",
+      "name": "精选",
+      "font_class": "weibiaoti102",
+      "unicode": "e63b",
+      "unicode_decimal": 58939
+    },
+    {
+      "icon_id": "41374563",
+      "name": "箭头按钮",
+      "font_class": "jiantouanniu",
+      "unicode": "e6d2",
+      "unicode_decimal": 59090
+    },
+    {
+      "icon_id": "6049370",
+      "name": "txt",
+      "font_class": "txt",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
+      "icon_id": "9557673",
+      "name": "库存检查",
+      "font_class": "kucunjiancha",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "12446459",
+      "name": "031",
+      "font_class": "icon-test",
+      "unicode": "f037",
+      "unicode_decimal": 61495
+    },
+    {
+      "icon_id": "12613270",
+      "name": "communication1",
+      "font_class": "communication",
+      "unicode": "e632",
+      "unicode_decimal": 58930
+    },
+    {
+      "icon_id": "15174187",
+      "name": "txt",
+      "font_class": "txt1",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "20141218",
+      "name": "领送号段管理",
+      "font_class": "lingsong",
+      "unicode": "e764",
+      "unicode_decimal": 59236
+    },
+    {
+      "icon_id": "21679165",
+      "name": "进度报表-信息化网络安全报表-信息化及网络安全报表季度报表审核",
+      "font_class": "qiu",
+      "unicode": "e76f",
+      "unicode_decimal": 59247
+    },
+    {
+      "icon_id": "22253193",
+      "name": "TitleBar_Retrieve",
+      "font_class": "TitleBar_Retrieve",
+      "unicode": "e72a",
+      "unicode_decimal": 59178
+    },
+    {
+      "icon_id": "29306610",
+      "name": "icon-list-orderly",
+      "font_class": "list-orderly",
+      "unicode": "e673",
+      "unicode_decimal": 58995
+    }
+  ]
+}
