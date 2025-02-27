@@ -1,7 +1,7 @@
 <template>
   <section class="cta-two">
     <div class="container">
-      <img src="/assets/images/mocs/cta-moc-2-1.png" class="cta-two__moc" alt="Awesome Image" />
+      <img src="/assets/images/mocs/cta-moc-2-1.png" class="cta-two__moc" alt="结合Bing地图，支持全球任意国家地区定位，通过扩展关键词轻松锁定目标客户群体，快速获取公开号码数据。" />
       <div class="row">
         <div class="col-lg-6">
           <div class="cta-two__content">

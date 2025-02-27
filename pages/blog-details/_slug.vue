@@ -31,7 +31,6 @@ export default {
       const apiBase = $config.API_BASE;
       const collection = 'blogs';
       const slug = params.slug;
-
       if (!params.slug) {
         throw new Error('缺少参数[slug]');
       }
@@ -41,7 +40,7 @@ export default {
       apiUrl = `${apiBase}/${collection}`;
       queryParams = {
         'filters[slug][$eq]': slug,
-        'populate': '*' // 加载关联内容
+        'populate': '*', // 加载关联内容
       };
 
       const queryString = new URLSearchParams(queryParams).toString();

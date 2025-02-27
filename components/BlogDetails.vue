@@ -5,15 +5,15 @@
         <div class="col-lg-8">
           <div class="blog-one__single">
             <div class="blog-one__image">
-              <img src="/assets/images/blog/blog-d-1-1.jpg" alt="">
-<!--              <img :src="blog.ad.data.attributes.url" alt="">-->
+              <!--              <img src="/assets/images/blog/blog-d-1-1.jpg" alt="">-->
+              <img :src="blog.ad.data.attributes.url" alt="">
             </div><!-- /.blog-one__image -->
             <div class="blog-one__content">
               <h2 class="blog-one__title">
                 {{ blog.title }}
               </h2><!-- /.blog-one__title -->
               <ul class="list-unstyled blog-one__meta">
-                <li>{{ blog.createdAt.split('T')[0]}}</li>
+                <li>{{ blog.createdAt.split('T')[0] }}</li>
               </ul><!-- /.list-unstyled -->
               <div class="blog-one__text">
                 <div v-html="blog.content"></div>
@@ -68,13 +68,9 @@
             <div class="sidebar__single sidebar__tags">
               <h3 class="sidebar__title">Tags</h3><!-- /.sidebar__title -->
               <ul class="sidebar__tags-list">
-                <li class="sidebar__tags-list-item"><a href="#">Business,</a></li>
-                <li class="sidebar__tags-list-item"><a href="#">Agency,</a></li>
-                <li class="sidebar__tags-list-item"><a href="#">Technology,</a></li>
-                <li class="sidebar__tags-list-item"><a href="#">Parallax,</a></li>
-                <li class="sidebar__tags-list-item"><a href="#">Innovative,</a></li>
-                <li class="sidebar__tags-list-item"><a href="#">Professional,</a></li>
-                <li class="sidebar__tags-list-item"><a href="#">Experience,</a></li>
+                <li class="sidebar__tags-list-item" v-for="item in blog.tags.data">
+                  <nuxt-link :to="`/blog?tag=${item.attributes.tag_name}`">{{item.attributes.tag_name}}</nuxt-link>
+                </li>
               </ul><!-- /.sidebar__category-list -->
             </div><!-- /.sidebar__single -->
           </div><!-- /.sidebar -->
@@ -98,19 +94,19 @@ export default {
   mounted() {
     console.log(this.blog)
   },
-  head(){
-    return{
+  head() {
+    return {
       title: this.blog.title + '-dingdang',
-      meta:[
+      meta: [
         {
-          hid:'keywords',
-          name:'keywords',
-          content:this.blog.keywords
+          hid: 'keywords',
+          name: 'keywords',
+          content: this.blog.keywords
         },
         {
-          hid:'description',
-          name:'description',
-          content:this.blog.description
+          hid: 'description',
+          name: 'description',
+          content: this.blog.description
         }
       ]
     }

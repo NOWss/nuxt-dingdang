@@ -1,19 +1,20 @@
 <template>
-  <section class="faq-one">
+  <section class="faq-one" id="manual">
     <img src="/assets/images/background/faq-one-bg.png" alt="Awesome Image" class="faq-one__bg" />
     <div class="container">
       <div class="block-title text-center">
-        <h2 class="block-title__title">Want to Ask <span>Something</span> <br> From Us?</h2><!-- /.block-title__title -->
+        <h2 class="block-title__title">叮当助手<span>号码处理</span> <br>操作手册</h2><!-- /.block-title__title -->
       </div><!-- /.block-title -->
       <div class="accrodion-grp" data-grp-name="faq-accrodion">
         <div class="accrodion active wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="0ms">
           <div class="accrodion-inner">
             <div class="accrodion-title">
-              <h4>Pre and post launch mobile app marketing pitfalls to avoid</h4>
+              <h4>步骤一：</h4>
             </div>
             <div class="accrodion-content">
               <div class="inner">
-                <p>There are many variations of passages of available but majority have alteration in some by inject humour or random words. Lorem ipsum dolor sit amet, error insolens reprimique no quo, ea pri verterem phaedr vel ea iisque aliquam.</p>
+                <p>下载客户端，点击【号码处理】使用</p>
+                <img src="/assets/images/hmcl/1.png">
               </div><!-- /.inner -->
             </div>
           </div><!-- /.accrodion-inner -->
@@ -21,11 +22,12 @@
         <div class="accrodion  wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
           <div class="accrodion-inner">
             <div class="accrodion-title">
-              <h4>Boostup your application traffic is just a step away</h4>
+              <h4>步骤二：</h4>
             </div>
             <div class="accrodion-content">
               <div class="inner">
-                <p>There are many variations of passages of available but majority have alteration in some by inject humour or random words. Lorem ipsum dolor sit amet, error insolens reprimique no quo, ea pri verterem phaedr vel ea iisque aliquam.</p>
+                <p>支持多次导入本地TXT格式数据，数据可 进行号码排序乱序、去重、清除非手机号 、清除空号、导出等功能</p>
+                <img src="/assets/images/hmcl/2.png">
               </div><!-- /.inner -->
             </div>
           </div><!-- /.accrodion-inner -->
@@ -33,11 +35,12 @@
         <div class="accrodion wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="200ms">
           <div class="accrodion-inner">
             <div class="accrodion-title">
-              <h4>How to update application new features</h4>
+              <h4>步骤三：</h4>
             </div>
             <div class="accrodion-content">
               <div class="inner">
-                <p>There are many variations of passages of available but majority have alteration in some by inject humour or random words. Lorem ipsum dolor sit amet, error insolens reprimique no quo, ea pri verterem phaedr vel ea iisque aliquam.</p>
+                <p>筛选功能：可按号码值跟按组合特征对号按组合特征对号码进行精确筛选</p>
+                <img src="/assets/images/hmcl/3.png">
               </div><!-- /.inner -->
             </div>
           </div><!-- /.accrodion-inner -->
@@ -45,11 +48,12 @@
         <div class="accrodion wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="300ms">
           <div class="accrodion-inner">
             <div class="accrodion-title">
-              <h4>How to connect with the support to improve app experience</h4>
+              <h4>步骤四：</h4>
             </div>
             <div class="accrodion-content">
               <div class="inner">
-                <p>There are many variations of passages of available but majority have alteration in some by inject humour or random words. Lorem ipsum dolor sit amet, error insolens reprimique no quo, ea pri verterem phaedr vel ea iisque aliquam.</p>
+                <p>可分批下载数据，导出格式支持TXT/VCF格式</p>
+                <img src="/assets/images/hmcl/4.png">
               </div><!-- /.inner -->
             </div>
           </div><!-- /.accrodion-inner -->

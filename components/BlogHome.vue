@@ -2,13 +2,13 @@
   <section class="blog-one blog-one__home thm-gray-bg" id="news">
     <div class="container">
       <div class="block-title text-center">
-        <h2 class="block-title__title">Checkout Our <span>Latest</span> <br> News & Articles.</h2><!-- /.block-title__title -->
+        <h2 class="block-title__title">新闻资讯</h2><!-- /.block-title__title -->
       </div><!-- /.block-title -->
       <div class="row">
         <div class="col-lg-4 col-md-12 col-sm-12 wow fadeInUp" data-wow-duration="1500ms" v-for="blog in blogs" :key="blog.id">
           <div class="blog-one__single">
             <div class="blog-one__image">
-              <img src="/assets/images/blog/blog-1-1.jpg" alt="">
+              <img :src="blog.attributes.ad.data.attributes.url" alt="">
               <nuxt-link class="blog-one__more-link" :to="`/blog-details/${blog.attributes.slug}`"><i class="fa fa-link"></i>
                 <!-- /.fa fa-link --></nuxt-link>
             </div><!-- /.blog-one__image -->
@@ -37,6 +37,9 @@
           type: Array,
           required: true
         }
+      },
+      mounted() {
+        console.log(this.blogs)
       }
     }
 </script>
