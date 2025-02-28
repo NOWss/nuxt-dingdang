@@ -11,7 +11,7 @@
       <div class="row">
         <div class="col-xl-12 col-lg-12">
           <div class="banner-two__content" style="text-align:center;">
-            <h1 class="banner-two__title banner_title">全球通讯数据管理专家</h1><!-- /.banner-two__title -->
+            <h1 class="banner-two__title banner_title">专业的号码处理软件</h1><!-- /.banner-two__title -->
             <h2 class="banner-two__subtitle">为用户提供批量精选号码和个性化定制工具使用</h2>
             <!-- /.banner-two__text -->
             <a href="#" class="banner-two__btn thm-btn ">

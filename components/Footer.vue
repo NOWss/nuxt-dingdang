@@ -67,26 +67,26 @@
     </footer>
     <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
 
-    <div class="sidebar-right">
-      <a class="item">
-        <span>
-          <i class="fa fa-telegram"></i>
-          客服
-        </span>
-      </a>
-      <a class="item">
-        <span>
-          <i class="fa fa-telegram"></i>
-          客服
-        </span>
-      </a>
-      <a class="item">
-        <span>
-          <i class="fa fa-telegram"></i>
-          客服
-        </span>
-      </a>
-    </div>
+<!--    <div class="sidebar-right">-->
+<!--      <a class="item">-->
+<!--        <span>-->
+<!--          <i class="fa fa-telegram"></i>-->
+<!--          客服-->
+<!--        </span>-->
+<!--      </a>-->
+<!--      <a class="item">-->
+<!--        <span>-->
+<!--          <i class="fa fa-telegram"></i>-->
+<!--          客服-->
+<!--        </span>-->
+<!--      </a>-->
+<!--      <a class="item">-->
+<!--        <span>-->
+<!--          <i class="fa fa-telegram"></i>-->
+<!--          客服-->
+<!--        </span>-->
+<!--      </a>-->
+<!--    </div>-->
   </div>
 </template>
 

@@ -37,11 +37,20 @@
             <li class="scrollToLink">
               <a href="#manual">操作手册</a>
             </li>
+            <li class="scrollToLink">
+              <a href="#manual">官方核验</a>
+            </li>
+            <li class="scrollToLink">
+              <a href="#manual">地区代码</a>
+            </li>
+            <li class="scrollToLink">
+              <a href="https://t.me/dingdangtw" target="_blank">联系我们</a>
+            </li>
           </ul>
         </div><!-- /.navbar-collapse -->
-        <div class="right-side-box">
-          <nuxt-link class="thm-btn header__cta-btn" to="/download"><span>软件下载</span></nuxt-link>
-        </div><!-- /.right-side-box -->
+<!--        <div class="right-side-box">-->
+<!--          <nuxt-link class="thm-btn header__cta-btn" to="/download"><span>官方核验</span></nuxt-link>-->
+<!--        </div>&lt;!&ndash; /.right-side-box &ndash;&gt;-->
       </div>
       <!-- /.container -->
     </nav>
