@@ -1,13 +1,13 @@
 <template>
   <div>
-    <HeaderTwo/>
+    <Header/>
     <PageHeader :title="$route.query.tag ? $route.query.tag : '新闻列表'"/>
     <Blog :blogs="blogs" :pageCount="pageCount"/>
     <Footer/>
   </div>
 </template>
 <script>
-import HeaderTwo from "~/components/HeaderTwo.vue";
+import Header from "~/components/Header.vue";
 import PageHeader from "~/components/PageHeader.vue";
 import Blog from "~/components/Blog.vue";
 import Footer from "~/components/Footer.vue";
@@ -15,7 +15,7 @@ import Strapi from 'strapi-sdk-javascript'
 
 export default {
   components: {
-    HeaderTwo,
+    Header,
     PageHeader,
     Blog,
     Footer,
@@ -83,7 +83,19 @@ export default {
   },
   head() {
     return {
-      title: "Dimon | Blog"
+      title: "叮当助手（全球号）新闻资讯-dingdang",
+      meta: [
+        {
+          hid: 'keywords',
+          name: 'keywords',
+          content: "全球号码免费生成，外国号码生成工具，号码处理工具，号码处理软件，批量添加区号，号码去重工具，号码对比工具，号码导出vcf格式，号码排序工具，识别非手机号码，公开号码数据采集，区分不同国家号码。"
+        },
+        {
+          hid: 'description',
+          name: 'description',
+          content: "叮当助手（全球号）新闻资讯专注于全球号码相关行业引流、推广与营销领域的最新动态，提供基于号码数据驱动的深度洞察与实用资讯，助您实时把握全球市场动向，提升业务效率，赋能品牌增长。"
+        }
+      ]
     }
   }
 }

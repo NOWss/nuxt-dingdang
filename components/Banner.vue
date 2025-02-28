@@ -15,7 +15,7 @@
             <h3 class="banner-one__title">We Deliver the <br> <span>Software</span> you <br> Need.</h3><!-- /.banner-one__title -->
             <p class="banner-one__text">We are committed to providing our customers with <br> exceptional service while offering our employees the <br> best training.</p>
             <!-- /.banner-one__text -->
-            <a href="#" class="banner-one__btn thm-btn "><span>Get Started</span></a><!-- /.thm-btn -->
+            <nuxt-link to="/download" class="banner-one__btn thm-btn "><span>Get Started</span></nuxt-link><!-- /.thm-btn -->
           </div><!-- /.banner-one__content -->
         </div><!-- /.col-lg-6 -->
       </div><!-- /.row -->

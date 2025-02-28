@@ -12,7 +12,6 @@
     <Screenshots/>
     <Faq/>
     <BlogHome :blogs="blogs"/>
-    <!--    <Subscribe />-->
     <Footer/>
   </div>
 </template>
@@ -29,7 +28,6 @@ import Counter from "~/components/Counter.vue";
 import Screenshots from "~/components/Screenshots.vue";
 import Faq from "~/components/Faq.vue";
 import BlogHome from "~/components/BlogHome.vue";
-import Subscribe from "~/components/Subscribe.vue";
 import Footer from "~/components/Footer.vue";
 import Strapi from "strapi-sdk-javascript";
 
@@ -47,7 +45,6 @@ export default {
     Screenshots,
     Faq,
     BlogHome,
-    Subscribe,
     Footer,
 
   },
@@ -58,9 +55,10 @@ export default {
       const blogs = await strapi.getEntries('blogs', {
         populate: "*", pagination: {
           pageSize: 6,
-          page:2,
+          page:1,
         }
       });  // 获取博客列表数据
+      console.log(blogs)
       return {blogs: blogs.data};  // 返回获取的数据
     } catch (err) {
       console.error('Strapi API 请求失败:', err);
@@ -68,7 +66,7 @@ export default {
   },
   head() {
     return {
-      title: "叮当助手（全球号-一站式号码生成与处理平台",
+      title: "叮当助手（全球号-一站式号码生成与处理平台-dingdang",
       meta: [
         {
           hid: 'keywords',

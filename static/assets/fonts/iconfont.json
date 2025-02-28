@@ -6,6 +6,34 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "9266046",
+      "name": "macos",
+      "font_class": "macos1",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "4936983",
+      "name": "windows-fill",
+      "font_class": "windows-fill",
+      "unicode": "e882",
+      "unicode_decimal": 59522
+    },
+    {
+      "icon_id": "2075064",
+      "name": "ios",
+      "font_class": "ios",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "2325971",
+      "name": "安卓",
+      "font_class": "anzhuo",
+      "unicode": "e64d",
+      "unicode_decimal": 58957
+    },
+    {
       "icon_id": "3258075",
       "name": "精选",
       "font_class": "jingxuan",

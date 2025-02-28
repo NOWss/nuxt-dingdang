@@ -7,16 +7,16 @@
       </div><!-- /.block-title -->
       <div class="app-shot-one__carousel owl-theme owl-carousel">
         <div class="item">
-          <img src="/assets/images/jxhd/1.png" alt="">
+          <img src="/assets/images/jxhd/1.png" alt="登录会员账号，点击【精选号段】使用">
         </div><!-- /.item -->
         <div class="item">
-          <img src="/assets/images/jxhd/2.png" alt="">
+          <img src="/assets/images/jxhd/2.png" alt="选择你所需国家地区搜索号段">
         </div><!-- /.item -->
         <div class="item">
-          <img src="/assets/images/jxhd/3.png" alt="">
+          <img src="/assets/images/jxhd/3.png" alt='确定勾选所选号段，选择是否带"+"下载'>
         </div><!-- /.item -->
         <div class="item">
-          <img src="/assets/images/jxhd/4.png" alt="">
+          <img src="/assets/images/jxhd/4.png" alt="可选择指定数量分批下载">
         </div><!-- /.item -->
       </div><!-- /.app-shot-one__carousel owl-theme owl-carousel -->
     </div><!-- /.container-fluid -->

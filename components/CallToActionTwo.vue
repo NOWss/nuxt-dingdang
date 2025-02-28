@@ -12,7 +12,7 @@
             <div class="cta-two__text">
               <p>结合Bing地图，支持全球任意国家地区定位，通过扩展关键词轻松锁定目标客户群体，快速获取公开号码数据。</p>
             </div><!-- /.cta-two__text -->
-            <a href="#" class="thm-btn"><span>下载应用</span></a>
+            <nuxt-link to="/download" class="thm-btn"><span>下载应用</span></nuxt-link>
           </div><!-- /.cta-two__content -->
         </div><!-- /.col-lg-6 -->
       </div><!-- /.row -->

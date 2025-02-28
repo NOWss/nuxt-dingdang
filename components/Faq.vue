@@ -14,7 +14,7 @@
             <div class="accrodion-content">
               <div class="inner">
                 <p>下载客户端，点击【号码处理】使用</p>
-                <img src="/assets/images/hmcl/1.png">
+                <img src="/assets/images/hmcl/1.png" alt="下载客户端，点击【号码处理】使用">
               </div><!-- /.inner -->
             </div>
           </div><!-- /.accrodion-inner -->
@@ -27,7 +27,7 @@
             <div class="accrodion-content">
               <div class="inner">
                 <p>支持多次导入本地TXT格式数据，数据可 进行号码排序乱序、去重、清除非手机号 、清除空号、导出等功能</p>
-                <img src="/assets/images/hmcl/2.png">
+                <img src="/assets/images/hmcl/2.png" alt="支持多次导入本地TXT格式数据，数据可 进行号码排序乱序、去重、清除非手机号 、清除空号、导出等功能">
               </div><!-- /.inner -->
             </div>
           </div><!-- /.accrodion-inner -->
@@ -40,7 +40,7 @@
             <div class="accrodion-content">
               <div class="inner">
                 <p>筛选功能：可按号码值跟按组合特征对号按组合特征对号码进行精确筛选</p>
-                <img src="/assets/images/hmcl/3.png">
+                <img src="/assets/images/hmcl/3.png" alt="筛选功能：可按号码值跟按组合特征对号按组合特征对号码进行精确筛选">
               </div><!-- /.inner -->
             </div>
           </div><!-- /.accrodion-inner -->
@@ -53,7 +53,7 @@
             <div class="accrodion-content">
               <div class="inner">
                 <p>可分批下载数据，导出格式支持TXT/VCF格式</p>
-                <img src="/assets/images/hmcl/4.png">
+                <img src="/assets/images/hmcl/4.png" alt="可分批下载数据，导出格式支持TXT/VCF格式">
               </div><!-- /.inner -->
             </div>
           </div><!-- /.accrodion-inner -->

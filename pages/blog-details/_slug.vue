@@ -1,22 +1,23 @@
 <template>
   <div>
-    <HeaderTwo/>
+    <Header/>
     <PageHeader :title="blog.title"/>
-    <BlogDetails :blog="blog"/>
+    <BlogDetails :blog="blog" :new-blogs="newBlogs"/>
     <Footer/>
   </div>
 </template>
 <script>
-import HeaderTwo from "~/components/HeaderTwo.vue";
+import Header from "~/components/Header.vue";
 import PageHeader from "~/components/PageHeader.vue";
 import BlogDetails from "~/components/BlogDetails.vue";
 import Footer from "~/components/Footer.vue";
 import BlogHome from "~/components/BlogHome.vue";
+import Strapi from "strapi-sdk-javascript";
 
 export default {
   components: {
     BlogHome,
-    HeaderTwo,
+    Header,
     PageHeader,
     BlogDetails,
     Footer
@@ -26,7 +27,7 @@ export default {
       title: "Dimon | Blog Details"
     }
   },
-  async asyncData({$config, params, error}){
+  async asyncData({$config, params, error}) {
     try {
       const apiBase = $config.API_BASE;
       const collection = 'blogs';
@@ -59,7 +60,14 @@ export default {
         return; // 提前终止
       }
 
-      return {blog};
+      const strapi = new Strapi($config.API_BASE);
+      const newBlogs = await strapi.getEntries('blogs', {
+        populate: "*", pagination: {
+          pageSize: 3,
+          page: 1,
+        }
+      });
+      return {blog, newBlogs};
 
     } catch (err) {
       error({statusCode: err.response?.status || 500})

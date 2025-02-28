@@ -40,7 +40,7 @@
           </ul>
         </div><!-- /.navbar-collapse -->
         <div class="right-side-box">
-          <a class="thm-btn header__cta-btn" href="#"><span>软件下载</span></a>
+          <nuxt-link class="thm-btn header__cta-btn" to="/download"><span>软件下载</span></nuxt-link>
         </div><!-- /.right-side-box -->
       </div>
       <!-- /.container -->

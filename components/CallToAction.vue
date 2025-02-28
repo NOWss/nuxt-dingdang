@@ -20,7 +20,7 @@
               <li><i class="fa fa-check"></i>AI驱动，算法赋能</li>
               <li><i class="fa fa-check"></i>数据实时处理不留存</li>
             </ul><!-- /.list-unstyled -->
-            <a href="#" class="thm-btn"><span>下载应用</span></a>
+            <nuxt-link to="/download" class="thm-btn"><span>下载应用</span></nuxt-link>
           </div><!-- /.cta-one__content -->
         </div><!-- /.col-lg-6 -->
       </div><!-- /.row -->

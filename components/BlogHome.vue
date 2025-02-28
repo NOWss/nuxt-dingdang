@@ -8,7 +8,7 @@
         <div class="col-lg-4 col-md-12 col-sm-12 wow fadeInUp" data-wow-duration="1500ms" v-for="blog in blogs" :key="blog.id">
           <div class="blog-one__single">
             <div class="blog-one__image">
-              <img :src="blog.attributes.ad.data.attributes.url" alt="">
+              <img :src="blog.attributes.ad.data.attributes.url" :alt="blog.attributes.title">
               <nuxt-link class="blog-one__more-link" :to="`/blog-details/${blog.attributes.slug}`"><i class="fa fa-link"></i>
                 <!-- /.fa fa-link --></nuxt-link>
             </div><!-- /.blog-one__image -->
