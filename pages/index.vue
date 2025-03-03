@@ -66,7 +66,7 @@ export default {
   },
   head() {
     return {
-      title: "叮当助手（全球号-一站式号码生成与处理平台-dingdang",
+      title: "叮当助手（全球号）-一站式号码生成与处理平台-dingdang",
       meta: [
         {
           hid: 'keywords',
