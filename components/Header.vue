@@ -15,7 +15,7 @@
         <div class="main-navigation">
           <ul class=" one-page-scroll-menu navigation-box">
             <li class="current scrollToLink">
-              <a href="/">首页</a>
+              <a href="/#banner">首页</a>
             </li>
             <li class="scrollToLink">
               <a href="/#features">核心功能</a>
@@ -131,7 +131,7 @@ export default {
     function OnePageMenuScroll() {
       var windscroll = $(window).scrollTop();
       if (windscroll >= 100) {
-        var menuAnchor = $('.one-page-scroll-menu .scrollToLink').children('a');
+        var menuAnchor = $('.one-page-scroll-menu .scrollToLink').children('.scrollLink');
         menuAnchor.each(function () {
           // grabing section id dynamically
           var sections = $(this).attr('href');

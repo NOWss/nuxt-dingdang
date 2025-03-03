@@ -15,19 +15,19 @@
         <div class="main-navigation">
           <ul class=" one-page-scroll-menu navigation-box">
             <li class="current scrollToLink">
-              <a href="#banner">首页</a>
+              <a class="scrollLink" href="#banner">首页</a>
             </li>
             <li class="scrollToLink">
-              <a href="#features">核心功能</a>
+              <a class="scrollLink" href="#features">核心功能</a>
             </li>
             <li class="scrollToLink">
-              <a href="#product">产品亮点</a>
+              <a class="scrollLink" href="#product">产品亮点</a>
             </li>
             <li class="scrollToLink">
-              <a href="#pricing">产品价格</a>
+              <a class="scrollLink" href="#pricing">产品价格</a>
             </li>
             <li class="scrollToLink">
-              <a href="#news">新闻资讯</a>
+              <a class="scrollLink" href="#news">新闻资讯</a>
               <ul class="sub-menu">
                 <li>
                   <nuxt-link to="/blog">新闻列表</nuxt-link>
@@ -35,13 +35,13 @@
               </ul><!-- /.sub-menu -->
             </li>
             <li class="scrollToLink">
-              <a href="#manual">操作手册</a>
+              <a class="scrollLink" href="#manual">操作手册</a>
             </li>
             <li class="scrollToLink">
               <nuxt-link to="/check">官方核验</nuxt-link>
             </li>
             <li class="scrollToLink">
-              <a href="#manual">地区代码</a>
+              <a class="scrollLink" href="#manual">地区代码</a>
             </li>
             <li class="scrollToLink">
               <a href="https://t.me/dingdangtw" target="_blank">联系我们</a>
@@ -131,7 +131,7 @@ export default {
     function OnePageMenuScroll() {
       var windscroll = $(window).scrollTop();
       if (windscroll >= 100) {
-        var menuAnchor = $('.one-page-scroll-menu .scrollToLink').children('a');
+        var menuAnchor = $('.one-page-scroll-menu .scrollToLink').children('.scrollLink');
         menuAnchor.each(function () {
           // grabing section id dynamically
           var sections = $(this).attr('href');
