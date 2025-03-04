@@ -15,6 +15,7 @@
     "@nuxtjs/dotenv": "^1.4.2",
     "@nuxtjs/proxy": "^2.1.0",
     "@nuxtjs/strapi": "^2.0.0",
+    "@nuxtjs/vuetify": "^1.12.3",
     "dotenv": "^16.4.7",
     "env-var": "^7.5.0",
     "nuxt": "^2.0.0",

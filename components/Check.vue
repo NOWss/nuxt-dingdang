@@ -214,6 +214,7 @@ export default {
       };
       const queryString = new URLSearchParams(queryParams).toString();
       const urlWithQuery = `${apiUrl}?${queryString}`;
+
       const response = await fetch(urlWithQuery);
 
       if (!response.ok) {
@@ -248,6 +249,7 @@ export default {
       };
       const queryString = new URLSearchParams(queryParams).toString();
       const urlWithQuery = `${apiUrl}?${queryString}`;
+      console.log(urlWithQuery)
       const response = await fetch(urlWithQuery);
 
       if (!response.ok) {

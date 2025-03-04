@@ -41,7 +41,7 @@
               <nuxt-link to="/check">官方核验</nuxt-link>
             </li>
             <li class="scrollToLink">
-              <a href="/#manual">地区代码</a>
+              <nuxt-link to="area-code">地区代码</nuxt-link>
             </li>
             <li class="scrollToLink">
               <a href="https://t.me/dingdangtw" target="_blank">联系我们</a>

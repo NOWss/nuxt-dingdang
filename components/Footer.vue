@@ -59,7 +59,7 @@
       <div class="site-footer__bottom">
         <div class="container">
           <div class="inner-container text-center">
-            <p class="site-footer__copy">&copy; copyright 2024 by <a href="#">Layerdrops.com</a></p>
+            <p class="site-footer__copy">&copy; copyright 2024 by <a href="#">new.dingdang.tw</a></p>
             <!-- /.site-footer__copy -->
           </div><!-- /.inner-container -->
         </div><!-- /.container -->

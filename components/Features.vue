@@ -11,6 +11,9 @@
               <i class="service-one__icon iconfont icon-communication"></i>
               <h3><a href="#">号码处理</a></h3>
               <p>支持大批量导入、一键排序乱序、智能清理非手机号码及重复数据等的多样化号码处理工具</p>
+              <div class="top-right-btn">
+                免费
+              </div>
             </div><!-- /.service-one__inner -->
           </div><!-- /.service-one__single -->
         </div><!-- /.col-lg-3 col-md-6 col-sm-12 -->

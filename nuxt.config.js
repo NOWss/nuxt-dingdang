@@ -3,6 +3,9 @@ const { from } = require('env-var');
 const env = from(process.env);
 
 export default {
+  ssr: true, // 开启服务端渲染
+  target: 'server', // 确保是 SSR 模式（如果要静态生成可用 'static'）
+
   mode: 'universal',
   // ✨ 注入公共环境变量到客户端
   publicRuntimeConfig: {
@@ -70,7 +73,9 @@ export default {
   /*
   ** Nuxt.js dev-modules
   */
-  buildModules: [],
+  buildModules: [
+    '@nuxtjs/vuetify'
+  ],
   /*
   ** Nuxt.js modules
   */
@@ -100,5 +105,10 @@ export default {
   server: {
     host: '0.0.0.0',  // 绑定到所有网络接口，允许局域网内的其他设备访问
     port: 3000,       // 你可以指定端口，默认是 3000
+  },
+  vuetify: {
+    theme: {
+      dark: false
+    }
   }
 }

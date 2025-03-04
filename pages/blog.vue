@@ -37,7 +37,7 @@ export default {
         const strapi = new Strapi($config.API_BASE);
         blogs = await strapi.getEntries('blogs', {
           populate: "*", pagination: {
-            pageSize: 2,
+            pageSize: 6,
             page: query.page || 1
           },
         });  // 获取博客列表数据
@@ -88,7 +88,7 @@ export default {
         {
           hid: 'keywords',
           name: 'keywords',
-          content: "全球号码免费生成，外国号码生成工具，号码处理工具，号码处理软件，批量添加区号，号码去重工具，号码对比工具，号码导出vcf格式，号码排序工具，识别非手机号码，公开号码数据采集，区分不同国家号码。"
+          content: "手机号码处理软件，全球号码处理工具，海外号码生成器，随机号码生成器，号段生成器，vcf文件生成器，号码排序工具，号码乱序工具，号码去重工具，数据去重软件，手机号码采集软件，号码对比工具，批量添加国家代码工具。"
         },
         {
           hid: 'description',

@@ -72,6 +72,10 @@ export default {
     } catch (err) {
       error({statusCode: err.response?.status || 500})
     }
-  }
+  },
+  beforeRouteUpdate(to, from, next) {
+    this.$nuxt.refresh();  // 强制刷新页面，重新调用 asyncData
+    next();
+  },
 }
 </script>

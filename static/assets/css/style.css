@@ -64,7 +64,7 @@ a:visited {
 
 @media (min-width: 1200px) {
   .container {
-    max-width: 1200px;
+    max-width: 1200px !important;
   }
 }
 
@@ -2747,14 +2747,18 @@ a:visited {
   background-image: linear-gradient(40deg, #0db8ff 0%, #f033ff 100%);
 }
 
+.pricing-one [class*=col-]:nth-child(4) .pricing-one__btn {
+  background-image: linear-gradient(40deg, #fc1818 0%, #d600ff 100%);
+}
+
 .pricing-one .tabed-content #year,
 .pricing-one .tabed-content #month {
   display: none;
 }
 
 .pricing-one__single {
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .pricing-one__single h3,
@@ -3064,6 +3068,17 @@ a:visited {
   /*padding-bottom: 35px;*/
   padding: 50px 20px 35px 20px;
   box-sizing: border-box;
+  position: relative;
+}
+
+.service-one__inner .top-right-btn{
+  position: absolute;
+  top: -20px;
+  right: -12px;
+  padding: 5px 12px;
+  background: #FF7392;
+  border-radius: 10px;
+  color: #fff;
 }
 
 .service-one__icon {
