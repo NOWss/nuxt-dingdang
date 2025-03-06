@@ -49,7 +49,7 @@
           </ul>
         </div><!-- /.navbar-collapse -->
 <!--        <div class="right-side-box">-->
-<!--          <nuxt-link class="thm-btn header__cta-btn" to="/download"><span>官方核验</span></nuxt-link>-->
+<!--          <nuxt-link class="thm-btn header__cta-btn" to="/download"><span>下载应用</span></nuxt-link>-->
 <!--        </div>&lt;!&ndash; /.right-side-box &ndash;&gt;-->
       </div>
       <!-- /.container -->

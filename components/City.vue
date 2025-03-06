@@ -4,17 +4,21 @@
     <span class="banner-one__shape-2"></span>
     <span class="banner-one__shape-3"></span>
     <span class="banner-one__shape-4"></span>
-    <div class="container">
+    <div class="container" style="padding-top: 200px;">
       <div class="banner-one__moc">
         <img src="/assets/images/mocs/banner-moc-1-2.png" alt="城市区号大全"/>
       </div><!-- /.banner-one__moc -->
       <div class="row">
-        <div class="col-xl-6 col-lg-8">
+        <div class="col-xl-8 col-lg-8">
           <div class="banner-one__content">
             <v-card>
               <v-card-title>
-                {{ $route.query.country }}城市区号
-                <v-spacer></v-spacer>
+                {{ $route.query.country }}城市区号&nbsp;&nbsp;
+                <v-spacer>
+                  <nuxt-link to="/area-code">
+                    返回
+                  </nuxt-link>
+                </v-spacer>
                 <v-text-field
                   v-model="search"
                   append-icon="mdi-magnify"
@@ -85,7 +89,7 @@ export default {
       desserts: [],
       page: 1,
       pageCount: 0,
-      itemsPerPage: 5,
+      itemsPerPage: 8,
     }
   },
   mounted() {

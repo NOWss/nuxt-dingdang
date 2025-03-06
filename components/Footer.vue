@@ -65,34 +65,133 @@
         </div><!-- /.container -->
       </div><!-- /.site-footer__bottom -->
     </footer>
-    <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
-
-<!--    <div class="sidebar-right">-->
-<!--      <a class="item">-->
-<!--        <span>-->
-<!--          <i class="fa fa-telegram"></i>-->
-<!--          客服-->
-<!--        </span>-->
-<!--      </a>-->
-<!--      <a class="item">-->
-<!--        <span>-->
-<!--          <i class="fa fa-telegram"></i>-->
-<!--          客服-->
-<!--        </span>-->
-<!--      </a>-->
-<!--      <a class="item">-->
-<!--        <span>-->
-<!--          <i class="fa fa-telegram"></i>-->
-<!--          客服-->
-<!--        </span>-->
-<!--      </a>-->
-<!--    </div>-->
+    <a href="#" data-target="html" class="scroll-to-target scroll-to-top">
+      <i class="iconfont icon-fanhuidingbu"></i>
+    </a>
+    <div class="sidebar-right">
+      <div class="item" @click.stop="dialog = true">
+        <i class="iconfont icon-comment"></i>
+      </div>
+      <nuxt-link class="item" to="/download">
+        <i class="iconfont icon-xiazai_xiazai"></i>
+      </nuxt-link>
+      <a class="item" href="https://t.me/dingdangtw" target="_blank">
+        <i class="iconfont icon-telegram"></i>
+      </a>
+    </div>
+    <v-dialog
+      v-model="dialog"
+      persistent
+      max-width="600px"
+    >
+      <v-card>
+        <v-card-title>
+          <span class="text-h5">在线留言</span>
+        </v-card-title>
+        <v-card-text>
+          <v-container>
+            <v-row>
+              <v-col
+                cols="12"
+                sm="12"
+                md="12"
+              >
+                <v-textarea
+                  solo
+                  name="input-7-4"
+                  label="输入你想反馈的内容"
+                  v-model="submitData.content"
+                ></v-textarea>
+              </v-col>
+              <v-col
+                cols="12"
+                sm="12"
+                md="12"
+              >
+                <v-text-field
+                  label="联系人姓名"
+                  hint="此为必填项"
+                  v-model="submitData.name"
+                ></v-text-field>
+              </v-col>
+              <v-col
+                cols="12"
+                sm="12"
+                md="12"
+              >
+                <v-text-field
+                  label="手机号"
+                  persistent-hint
+                  required
+                  v-model="submitData.phone"
+                ></v-text-field>
+              </v-col>
+              <v-col cols="12">
+                <v-text-field
+                  label="微信号"
+                  hint="此为必填项"
+                  required
+                  v-model="submitData.wechat"
+                ></v-text-field>
+              </v-col>
+            </v-row>
+          </v-container>
+          <small>*必填项请务必输入 否则无法提交！</small>
+        </v-card-text>
+        <v-card-actions>
+          <v-spacer></v-spacer>
+          <v-btn
+            color="blue darken-1"
+            text
+            @click="dialog = false"
+          >
+            取消
+          </v-btn>
+          <v-btn
+            color="blue darken-1"
+            text
+            @click="submit"
+          >
+            提交
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
+    <v-snackbar v-model="snackbar.show" :color="snackbar.color" timeout="2000" top absolute :style="{zIndex: 9999}">
+      {{ snackbar.text }}
+      <template v-slot:action="{ attrs }">
+        <v-btn
+          color="blue"
+          text
+          v-bind="attrs"
+          @click="snackbar.show = false"
+        >
+          关闭
+        </v-btn>
+      </template>
+    </v-snackbar>
   </div>
 </template>
 
 <script>
 export default {
   name: "Footer",
+  data() {
+    return {
+      dialog: false,
+      submitData: {
+        content: "",
+        name: "",
+        phone: "",
+        wechat: ""
+      },
+      snackbar: {
+        show: false,
+        color: 'success',
+        text: ""
+      }
+    }
+  },
   mounted() {
 
     $(window).on('scroll', function () {
@@ -105,6 +204,41 @@ export default {
         }
       }
     })
+  },
+  methods: {
+    showMessage(text, type = "success") {
+      this.snackbar.text = text;
+      this.snackbar.color = type === "error" ? "red" : "green";
+      this.snackbar.show = true;
+    },
+    async submit() {
+      const data = {
+        data: {
+          content: this.submitData.content,
+          name: this.submitData.name,
+          phone: this.submitData.phone,
+          wechat: this.submitData.wechat
+        }
+      }
+      try {
+        if (this.submitData.name === "" && this.submitData.wechat === '') {
+          this.showMessage('请务必填入必填项')
+          return
+        }
+        const apiBase = this.$config.API_BASE;
+        const res = await fetch(`${apiBase}/messages`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data)
+        })
+        this.showMessage('提交成功')
+        this.dialog = false
+      } catch (error) {
+        console.error("创建失败", error);
+      }
+    }
   }
 }
 </script>
@@ -112,38 +246,39 @@ export default {
 <style scoped>
 .sidebar-right {
   position: fixed;
-  right: 0px;
-  bottom: 400px;
-  width: 70px;
-  height: 250px;
+  right: 40px;
+  bottom: 300px;
+  width: 45px;
+  height: 180px;
   z-index: 9999;
   border-radius: 20px 0 0 20px;
-  background-image: -webkit-gradient(linear, left top, right top, from(#ff4eb5), color-stop(51%, #ffa065), to(#ff4eb5));
-  background-image: linear-gradient(to right, #ff4eb5 0%, #ffa065 51%, #ff4eb5 100%);
   background-size: 200% auto;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 
-  .item{
-    width: 100%;
-    padding: 20px;
+  .item {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    background: #fff;
     text-align: center;
-    box-sizing: border-box;
-    height: 33.3%;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(28, 31, 35, .08), 0 16px 48px 8px rgba(28, 31, 35, .08);
+    cursor: pointer;
 
-    span{
-      color: #fff;
-      font-size: 14px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+    i {
+      color: #000;
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 45px;
+    }
 
-      *{
-        width: 100%;
-      }
-      i{
-        font-size: 24px;
+    &:hover {
+      i {
+        color: #FE6F9F;
       }
     }
   }

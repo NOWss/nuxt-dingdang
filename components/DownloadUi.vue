@@ -4,7 +4,7 @@
     <span class="banner-two__shape-2"></span>
     <span class="banner-two__shape-3"></span>
     <span class="banner-two__shape-4"></span>
-    <div class="banner-two__moc">
+    <div class="banner-two__moc" style="bottom: -50px">
       <img src="/assets/images/mocs/banner-moc-2-1.png" alt="全球手机号码智能处理软件"/>
     </div><!-- /.banner-two__moc -->
     <div class="container">

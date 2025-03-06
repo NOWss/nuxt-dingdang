@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont"; /* Project id 4833546 */
-  src: url('iconfont.woff2?t=1740995377428') format('woff2'),
-       url('iconfont.woff?t=1740995377428') format('woff'),
-       url('iconfont.ttf?t=1740995377428') format('truetype');
+  src: url('iconfont.woff2?t=1741248701279') format('woff2'),
+       url('iconfont.woff?t=1741248701279') format('woff'),
+       url('iconfont.ttf?t=1741248701279') format('truetype');
 }
 
 .iconfont {
@@ -11,6 +11,22 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-telegram:before {
+  content: "\eaf9";
+}
+
+.icon-comment:before {
+  content: "\e9b2";
+}
+
+.icon-fanhuidingbu:before {
+  content: "\e646";
+}
+
+.icon-xiazai_xiazai:before {
+  content: "\e616";
 }
 
 .icon-gou:before {

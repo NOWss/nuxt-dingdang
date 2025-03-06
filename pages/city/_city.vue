@@ -49,7 +49,7 @@ export default {
   },
   head() {
     return {
-      title: `${this.$route.params.city}代码查询-叮当助手（全球号）-dingdang`,
+      title: `${this.$route.query.country}代码查询-叮当助手（全球号）-dingdang`,
       meta: [
         {
           hid: 'keywords',

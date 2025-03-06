@@ -6,6 +6,34 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "704799",
+      "name": "telegram",
+      "font_class": "telegram",
+      "unicode": "eaf9",
+      "unicode_decimal": 60153
+    },
+    {
+      "icon_id": "18170396",
+      "name": "评论,说话,讨论,留言",
+      "font_class": "comment",
+      "unicode": "e9b2",
+      "unicode_decimal": 59826
+    },
+    {
+      "icon_id": "8972102",
+      "name": "返回顶部",
+      "font_class": "fanhuidingbu",
+      "unicode": "e646",
+      "unicode_decimal": 58950
+    },
+    {
+      "icon_id": "28491622",
+      "name": "下载",
+      "font_class": "xiazai_xiazai",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    },
+    {
       "icon_id": "107549",
       "name": "勾",
       "font_class": "gou",
