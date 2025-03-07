@@ -56,6 +56,51 @@
       <!--          </div>&lt;!&ndash; /.row &ndash;&gt;-->
       <!--        </div>&lt;!&ndash; /.container &ndash;&gt;-->
       <!--      </div>&lt;!&ndash; /.site-footer__upper &ndash;&gt;-->
+
+      <div class="site-footer__upper">
+        <div class="container">
+          <div class="inner-container">
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="footer-widget">
+                  <div>
+                    <img src="/assets/images/resources/logo-dark.png" alt="logo" width="150" class="main-logo">
+                  </div>
+                  <nuxt-link class="download" to="/download">
+                      <i class="iconfont icon-xiazai_xiazai"></i>
+                      下载应用
+                  </nuxt-link>
+                </div>
+              </div>
+              <div class="col-lg-5">
+                <div class="footer-widget">
+                  <h3 class="footer-widget__title" style="font-size: 28px;">联系我们</h3>
+                  <p>
+                    <i class="fa fa-clock-o" aria-hidden="true"></i>
+                    工作时间： 9:00AM-4:00AM
+                  </p>
+                  <p>
+                    <i class="iconfont icon-telegram"></i>
+                    联系客服： <a href="https://t.me/dingdangtw" target="_blank">@dingdangtw</a>
+                  </p>
+                  <p>
+                    <i class="fa fa-globe" aria-hidden="true"></i>
+                    资源入驻： <a href="https://t.me/tax678" target="_blank">@tax678</a>
+                  </p>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="footer-widget">
+                  <h3 class="footer-widget__title" style="font-size: 28px;">Important</h3>
+                  <p>
+                    叮当助手仅支持美元付款，任何非美元收款的通道，可能存在诈骗风险，请注意辨别.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="site-footer__bottom">
         <div class="container">
           <div class="inner-container text-center">
@@ -79,11 +124,7 @@
         <i class="iconfont icon-telegram"></i>
       </a>
     </div>
-    <v-dialog
-      v-model="dialog"
-      persistent
-      max-width="600px"
-    >
+    <v-dialog v-model="dialog" persistent max-width="600px">
       <v-card>
         <v-card-title>
           <span class="text-h5">在线留言</span>
@@ -91,48 +132,17 @@
         <v-card-text>
           <v-container>
             <v-row>
-              <v-col
-                cols="12"
-                sm="12"
-                md="12"
-              >
-                <v-textarea
-                  solo
-                  name="input-7-4"
-                  label="输入你想反馈的内容"
-                  v-model="submitData.content"
-                ></v-textarea>
+              <v-col cols="12" sm="12" md="12">
+                <v-textarea solo name="input-7-4" label="输入你想反馈的内容" v-model="submitData.content"></v-textarea>
               </v-col>
-              <v-col
-                cols="12"
-                sm="12"
-                md="12"
-              >
-                <v-text-field
-                  label="联系人姓名"
-                  hint="此为必填项"
-                  v-model="submitData.name"
-                ></v-text-field>
+              <v-col cols="12" sm="12" md="12">
+                <v-text-field label="联系人姓名" hint="此为必填项" v-model="submitData.name"></v-text-field>
               </v-col>
-              <v-col
-                cols="12"
-                sm="12"
-                md="12"
-              >
-                <v-text-field
-                  label="手机号"
-                  persistent-hint
-                  required
-                  v-model="submitData.phone"
-                ></v-text-field>
+              <v-col cols="12" sm="12" md="12">
+                <v-text-field label="手机号" persistent-hint required v-model="submitData.phone"></v-text-field>
               </v-col>
               <v-col cols="12">
-                <v-text-field
-                  label="微信号"
-                  hint="此为必填项"
-                  required
-                  v-model="submitData.wechat"
-                ></v-text-field>
+                <v-text-field label="微信号" hint="此为必填项" required v-model="submitData.wechat"></v-text-field>
               </v-col>
             </v-row>
           </v-container>
@@ -140,32 +150,19 @@
         </v-card-text>
         <v-card-actions>
           <v-spacer></v-spacer>
-          <v-btn
-            color="blue darken-1"
-            text
-            @click="dialog = false"
-          >
+          <v-btn color="blue darken-1" text @click="dialog = false">
             取消
           </v-btn>
-          <v-btn
-            color="blue darken-1"
-            text
-            @click="submit"
-          >
+          <v-btn color="blue darken-1" text @click="submit">
             提交
           </v-btn>
         </v-card-actions>
       </v-card>
     </v-dialog>
-    <v-snackbar v-model="snackbar.show" :color="snackbar.color" timeout="2000" top absolute :style="{zIndex: 9999}">
+    <v-snackbar v-model="snackbar.show" :color="snackbar.color" timeout="2000" top absolute :style="{ zIndex: 9999 }">
       {{ snackbar.text }}
       <template v-slot:action="{ attrs }">
-        <v-btn
-          color="blue"
-          text
-          v-bind="attrs"
-          @click="snackbar.show = false"
-        >
+        <v-btn color="blue" text v-bind="attrs" @click="snackbar.show = false">
           关闭
         </v-btn>
       </template>
@@ -244,6 +241,31 @@ export default {
 </script>
 
 <style scoped>
+.download {
+  font-size: 18px;
+  margin-top: 40px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(28, 31, 35, .08), 0 16px 48px 8px rgba(28, 31, 35, .08);
+  color: #000;
+  border-radius: 30px;
+  display: inline-block;
+  padding: 10px 20px;
+  cursor: pointer;
+
+  i {
+    font-size: 18px;
+    color: #000;
+  }
+
+  &:hover{
+    color: #FE6F9F;
+
+    i{
+      color: #FE6F9F;
+    }
+  }
+}
+
 .sidebar-right {
   position: fixed;
   right: 40px;

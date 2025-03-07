@@ -19,6 +19,7 @@
     "dotenv": "^16.4.7",
     "env-var": "^7.5.0",
     "nuxt": "^2.0.0",
+    "pnpm": "^10.6.1",
     "strapi-sdk-javascript": "^0.3.3"
   },
   "devDependencies": {

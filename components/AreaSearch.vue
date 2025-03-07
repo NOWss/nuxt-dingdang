@@ -9,7 +9,7 @@
         <img src="/assets/images/mocs/banner-moc-1-2.png" alt="国家区号大全"/>
       </div><!-- /.banner-one__moc -->
       <div class="row">
-        <div class="col-xl-8 col-lg-8">
+        <div class="col-xl-12 col-lg-12">
           <div class="banner-one__content">
             <v-card>
               <v-card-title>
@@ -31,6 +31,7 @@
                 @page-count="pageCount = $event"
                 :page.sync="page"
                 hide-default-footer
+                 style="min-height: 538px;"
               >
                 <!--                <template v-slot:item.name="{ item }">-->
                 <!--                  <div>-->
@@ -87,7 +88,7 @@ export default {
       desserts: [],
       page: 1,
       pageCount: 0,
-      itemsPerPage: 8,
+      itemsPerPage: 10,
     }
   },
   mounted() {
@@ -111,11 +112,11 @@ export default {
   }
 
   :deep(.theme--light.v-pagination .v-pagination__item--active) {
-    background: #000;
+    background: #000 !important;
   }
 
   :deep(.theme--light.v-btn.v-btn--has-bg) {
-    background: #F96445;
+    background: #F96445 !important;
     color: #fff;
   }
 }

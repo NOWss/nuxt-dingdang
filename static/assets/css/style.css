@@ -92,7 +92,7 @@ a:visited {
   outline: none;
   font-size: 16px;
   font-weight: 500;
-  color: #2a2833;
+  color: #2a2833 !important;
   padding: 13px 41px;
   border-radius: 5px;
   -webkit-transition: background .4s ease, color .4s ease;
@@ -124,7 +124,7 @@ a:visited {
 }
 
 .thm-btn:hover {
-  color: #fff;
+  color: #fff !important;
 }
 
 .thm-btn:hover:before {
@@ -1697,8 +1697,8 @@ a:visited {
 }
 
 .site-footer__upper {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .site-footer__bottom {
