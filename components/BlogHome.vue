@@ -9,7 +9,7 @@
              :key="blog.id">
           <div class="blog-one__single">
             <div class="blog-one__image">
-              <img :src="`https://newcms.dingdang.tw${blog.attributes.ad.data.attributes.url}`" :alt="blog.attributes.title">
+              <img :src="blog.attributes.ad.data.attributes.url" :alt="blog.attributes.title">
               <nuxt-link class="blog-one__more-link" :to="`/blog-details/${blog.attributes.slug}`"><i
                 class="fa fa-link"></i>
                 <!-- /.fa fa-link --></nuxt-link>

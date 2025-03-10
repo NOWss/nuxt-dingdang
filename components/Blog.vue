@@ -5,7 +5,7 @@
         <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" v-for="blog in blogs.data" :key="blog.id">
           <div class="blog-one__single">
             <div class="blog-one__image">
-              <img :src="`https://newcms.dingdang.tw${blog.attributes.ad.data.attributes.url}`" alt="">
+              <img :src="blog.attributes.ad.data.attributes.url" alt="">
               <nuxt-link class="blog-one__more-link" :to="`/blog-details/${blog.attributes.slug}`"><i
                 class="fa fa-link"></i>
                 <!-- /.fa fa-link --></nuxt-link>
