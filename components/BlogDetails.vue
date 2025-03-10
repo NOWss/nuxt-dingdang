@@ -6,7 +6,7 @@
           <div class="blog-one__single">
             <div class="blog-one__image">
               <!--              <img src="/assets/images/blog/blog-d-1-1.jpg" alt="">-->
-              <img :src="blog.ad.data.attributes.url" :alt="blog.title">
+              <img :src="`https://newcms.dingdang.tw${blog.ad.data.attributes.url}`" :alt="blog.title">
             </div><!-- /.blog-one__image -->
             <div class="blog-one__content" style="padding: 0 50px;padding-top: 45px;padding-bottom: 40px;">
               <h2 class="blog-one__title">
@@ -35,7 +35,7 @@
               <div class="sidebar__post-wrap">
                 <div class="sidebar__post__single" v-for="item in newBlogs.data">
                   <div class="sidebar__post-image">
-                    <div class="inner-block"><img :src="item.attributes.ad.data.attributes.url"
+                    <div class="inner-block"><img :src="`https://newcms.dingdang.tw${item.attributes.ad.data.attributes.url}`"
                                                   :alt="item.attributes.title">
                     </div>
                     <!-- /.inner-block -->
