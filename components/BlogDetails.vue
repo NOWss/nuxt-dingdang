@@ -16,7 +16,7 @@
                 <li>{{ blog.createdAt.split('T')[0] }}</li>
               </ul><!-- /.list-unstyled -->
               <div class="blog-one__text">
-                <div v-html="blog.content"></div>
+                <div class="blog_content" v-html="blog.content"></div>
               </div>
               <!-- /.blog-one__text -->
             </div><!-- /.blog-one__content -->
@@ -80,8 +80,18 @@ export default {
     }
   },
   mounted() {
-    console.log(this.blog)
-    console.log(this.newBlogs)
+    window.onload = function () {
+      // 获取文章内容容器
+      const detailsContent = document.querySelector('.blog-details .blog-one__text .blog_content');
+
+      // 获取容器内的所有 <a> 标签
+      const links = detailsContent.getElementsByTagName('a');
+
+      // 遍历所有 <a> 标签，设置 target="_blank"
+      for (let i = 0; i < links.length; i++) {
+        links[i].setAttribute('target', '_blank');
+      }
+    }
   },
   head() {
     return {
