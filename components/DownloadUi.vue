@@ -14,7 +14,7 @@
             <h1 class="banner-two__title banner_title">专业的号码处理软件</h1><!-- /.banner-two__title -->
             <h2 class="banner-two__subtitle">为用户提供批量精选号码和个性化定制工具使用</h2>
             <!-- /.banner-two__text -->
-            <a href="#" class="banner-two__btn thm-btn ">
+            <a :href="landingpage.attributes.downloadwin" class="banner-two__btn thm-btn" target="_blank">
               <span>
                 <i class="iconfont icon-windows-fill"></i>
                 &nbsp;下载应用
@@ -29,7 +29,13 @@
 <script>
 export default {
   name: 'DownloadUi',
-  head(){
+  props: {
+    landingpage: {  // 定义接收 blogs 的 props
+      type: Object,
+      required: true
+    }
+  },
+  head() {
     return {
       title: "叮当助手(全球号）App下载 - 专业的多功能号码处理软件-dingdang",
       meta: [
@@ -92,7 +98,7 @@ export default {
       align-items: center;
 
 
-      i{
+      i {
         font-size: 30px;
         margin-right: 10px;
       }

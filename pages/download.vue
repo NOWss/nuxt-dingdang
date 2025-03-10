@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header/>
-    <DownloadUi/>
+    <DownloadUi :landingpage="landingpage"/>
     <Footer/>
   </div>
 </template>
@@ -17,6 +17,15 @@ export default {
     Header,
     Footer,
     DownloadUi
+  },
+  async asyncData({$config}) {
+    try {
+      const strapi = new Strapi($config.API_BASE);
+      const landingpage = await strapi.getEntries('landingpage');
+      return {landingpage: landingpage.data};
+    } catch (err) {
+      console.error('Strapi API 请求失败:', err);
+    }
   },
   head() {
     return {
