@@ -6572,6 +6572,11 @@ pnp-webpack-plugin@^1.7.0:
   dependencies:
     ts-pnp "^1.1.6"
 
+pnpm@^10.6.1:
+  version "10.6.1"
+  resolved "https://registry.npmmirror.com/pnpm/-/pnpm-10.6.1.tgz#17584c9dbb21a878cd7ab42a6d52f2250c13db7a"
+  integrity sha512-QO4Jr0B/qfu1+/uOHLQPu3TArww+EOkiTXtTx2WFKGFbLJJFDnTPrZHjotyv485AUNgL2nHXV3VtLOK2YhPpow==
+
 posix-character-classes@^0.1.0:
   version "0.1.1"
   resolved "https://mirrors.huaweicloud.com/repository/npm/posix-character-classes/-/posix-character-classes-0.1.1.tgz#01eac0fe3b5af71a2a6c02feabb8c1fef7e00eab"
