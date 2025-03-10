@@ -7,7 +7,7 @@
     <div class="container">
       <ul class="list-unstyled thm-breadcrumb">
         <li><a href="/">主页</a></li>
-        <li class="active"><a href="#">{{ title}}</a></li>
+        <li class="active">{{ title}}</li>
       </ul><!-- /.list-unstyled -->
       <h1 class="inner-banner__title">{{ title}}</h1><!-- /.inner-banner__title -->
     </div><!-- /.container -->

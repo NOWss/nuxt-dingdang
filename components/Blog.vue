@@ -12,10 +12,16 @@
             </div><!-- /.blog-one__image -->
             <div class="blog-one__content">
               <ul class="list-unstyled blog-one__meta">
-                <li><a href="#">{{ blog.attributes.createdAt.split('T')[0] }}</a></li>
+                <li>
+                  <nuxt-link :to="`/blog-details/${blog.attributes.slug}`">
+                    {{ blog.attributes.createdAt.split('T')[0] }}
+                  </nuxt-link>
+                </li>
               </ul><!-- /.list-unstyled -->
               <h3 class="blog-one__title">
-                <nuxt-link :to="`/blog-details/${blog.attributes.slug}`">{{ blog.attributes.title }}</nuxt-link>
+                <nuxt-link :to="`/blog-details/${blog.attributes.slug}`" :title="blog.attributes.title">
+                  {{ blog.attributes.title }}
+                </nuxt-link>
               </h3><!-- /.blog-one__title -->
               <nuxt-link :to="`/blog-details/${blog.attributes.slug}`" class="blog-one__link">了解更多</nuxt-link>
               <!-- /.blog-one__link -->
@@ -23,13 +29,15 @@
           </div><!-- /.blog-one__single -->
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
-      <pagination :current-page="blogs.meta.pagination.page" :total-items="blogs.meta.pagination.total" :items-per-page="blogs.meta.pagination.pageSize" />
+      <pagination :current-page="blogs.meta.pagination.page" :total-items="blogs.meta.pagination.total"
+                  :items-per-page="blogs.meta.pagination.pageSize"/>
     </div><!-- /.container -->
   </section>
 </template>
 
 <script>
 import pagination from './pagination.vue'
+
 export default {
   name: "Blog",
   components: {
