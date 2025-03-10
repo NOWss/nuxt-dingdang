@@ -5,7 +5,7 @@
     <span class="banner-two__shape-3"></span>
     <span class="banner-two__shape-4"></span>
     <div class="container">
-      <ul class="list-unstyled thm-breadcrumb">
+      <ul class="list-unstyled thm-breadcrumb" style="padding-left: 0;">
         <li><a href="/">主页</a></li>
         <li class="active">{{ title}}</li>
       </ul><!-- /.list-unstyled -->
@@ -26,5 +26,4 @@
 </script>
 
 <style scoped>
-
 </style>

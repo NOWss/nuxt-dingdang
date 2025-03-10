@@ -67,8 +67,8 @@
                     <img src="/assets/images/resources/logo-dark.png" alt="logo" width="150" class="main-logo">
                   </div>
                   <nuxt-link class="download" to="/download">
-                      <i class="iconfont icon-xiazai_xiazai"></i>
-                      下载应用
+                    <i class="iconfont icon-xiazai_xiazai"></i>
+                    下载应用
                   </nuxt-link>
                 </div>
               </div>
@@ -91,7 +91,7 @@
               </div>
               <div class="col-lg-3">
                 <div class="footer-widget">
-                  <h3 class="footer-widget__title" style="font-size: 28px;">Important</h3>
+                  <h3 class="footer-widget__title" style="font-size: 28px;">重要提醒</h3>
                   <p>
                     叮当助手仅支持美元付款，任何非美元收款的通道，可能存在诈骗风险，请注意辨别.
                   </p>
@@ -104,7 +104,7 @@
       <div class="site-footer__bottom">
         <div class="container">
           <div class="inner-container text-center">
-            <p class="site-footer__copy">&copy; copyright 2024 by <a href="#">new.dingdang.tw</a></p>
+            <p class="site-footer__copy">&copy; copyright 2018-2025 by <a href="#">https://www.dingdang.tw</a></p>
             <!-- /.site-footer__copy -->
           </div><!-- /.inner-container -->
         </div><!-- /.container -->
@@ -114,7 +114,7 @@
       <i class="iconfont icon-fanhuidingbu"></i>
     </a>
     <div class="sidebar-right">
-      <div class="item" @click.stop="dialog = true">
+      <div class="item" @click.stop="clickComment">
         <i class="iconfont icon-comment"></i>
       </div>
       <nuxt-link class="item" to="/download">
@@ -136,13 +136,14 @@
                 <v-textarea solo name="input-7-4" label="输入你想反馈的内容" v-model="submitData.content"></v-textarea>
               </v-col>
               <v-col cols="12" sm="12" md="12">
-                <v-text-field label="联系人姓名" hint="此为必填项" v-model="submitData.name"></v-text-field>
+                <v-text-field label="称呼" hint="此为必填项" persistent-hint v-model="submitData.name"></v-text-field>
               </v-col>
               <v-col cols="12" sm="12" md="12">
-                <v-text-field label="手机号" persistent-hint required v-model="submitData.phone"></v-text-field>
+                <v-text-field label="Telegram联系方式" hint="此为必填项" persistent-hint required
+                              v-model="submitData.telegram"></v-text-field>
               </v-col>
               <v-col cols="12">
-                <v-text-field label="微信号" hint="此为必填项" required v-model="submitData.wechat"></v-text-field>
+                <v-text-field label="WhatsApp联系方式" required v-model="submitData.whatsapp"></v-text-field>
               </v-col>
             </v-row>
           </v-container>
@@ -179,8 +180,8 @@ export default {
       submitData: {
         content: "",
         name: "",
-        phone: "",
-        wechat: ""
+        telegram: "",
+        whatsapp: ""
       },
       snackbar: {
         show: false,
@@ -203,6 +204,15 @@ export default {
     })
   },
   methods: {
+    clickComment() {
+      this.dialog = true
+      this.submitData = {
+        content: "",
+        name: "",
+        telegram: "",
+        whatsapp: ""
+      }
+    },
     showMessage(text, type = "success") {
       this.snackbar.text = text;
       this.snackbar.color = type === "error" ? "red" : "green";
@@ -213,12 +223,12 @@ export default {
         data: {
           content: this.submitData.content,
           name: this.submitData.name,
-          phone: this.submitData.phone,
-          wechat: this.submitData.wechat
+          telegram: this.submitData.telegram,
+          whatsapp: this.submitData.whatsapp
         }
       }
       try {
-        if (this.submitData.name === "" && this.submitData.wechat === '') {
+        if (this.submitData.name === "" && this.submitData.telegram === '') {
           this.showMessage('请务必填入必填项')
           return
         }
@@ -257,14 +267,15 @@ export default {
     color: #000;
   }
 
-  &:hover{
+  &:hover {
     color: #FE6F9F;
 
-    i{
+    i {
       color: #FE6F9F;
     }
   }
 }
+
 
 .sidebar-right {
   position: fixed;
@@ -272,7 +283,7 @@ export default {
   bottom: 300px;
   width: 45px;
   height: 180px;
-  z-index: 9999;
+  z-index: 99;
   border-radius: 20px 0 0 20px;
   background-size: 200% auto;
   display: flex;
@@ -305,4 +316,11 @@ export default {
     }
   }
 }
+
+@media (max-width: 767px) {
+  .sidebar-right{
+    display: none;
+  }
+}
+
 </style>
