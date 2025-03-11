@@ -228,7 +228,7 @@ export default {
         }
       }
       try {
-        if (this.submitData.name === "" && this.submitData.telegram === '') {
+        if (this.submitData.name.trim() === "" || this.submitData.telegram.trim() === '') {
           this.showMessage('请务必填入必填项', 'error')
           return
         }
