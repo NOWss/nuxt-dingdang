@@ -229,7 +229,7 @@ export default {
       }
       try {
         if (this.submitData.name === "" && this.submitData.telegram === '') {
-          this.showMessage('请务必填入必填项')
+          this.showMessage('请务必填入必填项', 'error')
           return
         }
         const apiBase = this.$config.API_BASE;
@@ -318,7 +318,7 @@ export default {
 }
 
 @media (max-width: 767px) {
-  .sidebar-right{
+  .sidebar-right {
     display: none;
   }
 }
