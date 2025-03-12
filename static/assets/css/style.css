@@ -1104,6 +1104,11 @@ a:visited {
   overflow: hidden;
   text-overflow: ellipsis;
   /*white-space: nowrap;*/
+  min-height: 52px;
+  -webkit-line-clamp: 2;  /* 限制显示2行 */
+  -webkit-box-orient: vertical;
+  word-break: break-word;  /* 防止长单词撑破 */
+  display: -webkit-box;
 }
 
 .blog-one__title a {
