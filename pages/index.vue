@@ -55,8 +55,9 @@ export default {
       const blogs = await strapi.getEntries('blogs', {
         populate: "*", pagination: {
           pageSize: 6,
-          page:1,
-        }
+          page: 1,
+        },
+        sort:"id:desc"
       });  // 获取博客列表数据
       console.log(blogs)
       return {blogs: blogs.data};  // 返回获取的数据

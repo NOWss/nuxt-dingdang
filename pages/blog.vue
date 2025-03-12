@@ -40,6 +40,7 @@ export default {
             pageSize: 6,
             page: query.page || 1
           },
+          sort:"id:desc"
         });  // 获取博客列表数据
       } else {
         const apiBase = $config.API_BASE;
@@ -50,7 +51,8 @@ export default {
         apiUrl = `${apiBase}/${collection}`;
         queryParams = {
           'filters[tags][tag_name][$eq]': tag,
-          'populate': '*', // 加载关联内容
+          'populate': '*', // 加载关联内容,
+          'sort':'id:desc'
         }
 
         const queryString = new URLSearchParams(queryParams).toString();
