@@ -57,7 +57,7 @@ export default {
 
         const queryString = new URLSearchParams(queryParams).toString();
         const urlWithQuery = `${apiUrl}?${queryString}`;
-        console.log(`${apiUrl}?${queryString}`)
+        console.log(urlWithQuery)
         const response = await fetch(urlWithQuery);
         // 🔥处理HTTP状态码错误（4xx/5xx等）
         if (!response.ok) {

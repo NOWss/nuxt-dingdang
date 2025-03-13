@@ -29,6 +29,7 @@ export default {
       }
       const queryString = new URLSearchParams(queryParams).toString();
       const urlWithQuery = `${apiUrl}?${queryString}`;
+      console.log(urlWithQuery)
       const response = await fetch(urlWithQuery);
       if (!response.ok) {
         throw new Error(`服务器错误: ${response.status}`);

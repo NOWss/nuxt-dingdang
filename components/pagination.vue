@@ -136,6 +136,11 @@ export default {
 .dot{
   padding: 5px 10px;
 }
+
+a{
+  color: #0b0b0b;
+}
+
 a.disabled {
   color: #ccc;
   cursor: not-allowed;

@@ -56,23 +56,6 @@ export default {
   mounted() {
     console.log(this.blogs)
   },
-  head() {
-    return {
-      title: '新闻列表-dingdang',
-      meta: [
-        {
-          hid: 'keywords',
-          name: 'keywords',
-          content: "智能定位|全球检索|专业高效|节省安全"
-        },
-        {
-          hid: 'description',
-          name: 'description',
-          content: "Whatsapp出海"
-        }
-      ]
-    }
-  }
 }
 </script>
 
