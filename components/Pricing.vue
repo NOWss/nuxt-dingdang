@@ -47,7 +47,7 @@
                   <li>订阅即赠10天有效期</li>
                 </ul><!-- /.list-unstyled -->
                 <a href="https://t.me/dingdangtw" target="_blank" class="thm-btn pricing-one__btn"><span>前往充值</span></a>
-                <span class="tag-line">没有额外收费!</span>
+                <span class="tag-line">应用内支持自动充值</span>
               </div><!-- /.pricing-one__single -->
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-3 wow fadeInDown" data-wow-duration="1500ms">
@@ -64,7 +64,7 @@
                   <li>订阅即赠20天有效期</li>
                 </ul><!-- /.list-unstyled -->
                 <a href="https://t.me/dingdangtw" target="_blank" class="thm-btn pricing-one__btn"><span>前往充值</span></a>
-                <span class="tag-line">没有额外收费!</span>
+                <span class="tag-line">应用内支持自动充值</span>
               </div><!-- /.pricing-one__single -->
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-3 wow fadeInUp" data-wow-duration="1500ms">
@@ -81,7 +81,7 @@
                   <li>订阅即赠月度会员</li>
                 </ul><!-- /.list-unstyled -->
                 <a href="https://t.me/dingdangtw" target="_blank" class="thm-btn pricing-one__btn"><span>前往充值</span></a>
-                <span class="tag-line">没有额外收费!</span>
+                <span class="tag-line">应用内支持自动充值</span>
               </div><!-- /.pricing-one__single -->
             </div><!-- /.col-lg-4 -->
           </div><!-- /.row -->
