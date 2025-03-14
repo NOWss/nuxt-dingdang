@@ -67,6 +67,7 @@ export default {
           page: 1,
         }
       });
+
       return {blog, newBlogs};
 
     } catch (err) {

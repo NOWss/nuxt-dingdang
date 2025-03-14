@@ -81,15 +81,17 @@ export default {
       required: true
     }
   },
-  mounted() {
-    window.onload = function () {
-      // 获取文章内容容器
+  async mounted() {
+    this.$nextTick(() => {
+      this.setTargetBlank();
+    });
+  },
+  methods: {
+    setTargetBlank() {
       const detailsContent = document.querySelector('.blog-details .blog-one__text .blog_content');
+      if (!detailsContent) return;
 
-      // 获取容器内的所有 <a> 标签
       const links = detailsContent.getElementsByTagName('a');
-
-      // 遍历所有 <a> 标签，设置 target="_blank"
       for (let i = 0; i < links.length; i++) {
         links[i].setAttribute('target', '_blank');
       }
