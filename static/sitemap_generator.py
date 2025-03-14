@@ -116,22 +116,22 @@ def generate_sitemap():
                 attributes = item.get("attributes", {})
 
                 # 处理 `/blogs/{slug}`
-                # if content_type == 'blogs':
-                #     slug = attributes.get('slug')
-                #     if slug:
-                #         full_url = CONFIG['site_url'] + config['url_pattern'].format(slug=slug)
-                #         url = ET.SubElement(urlset, "url")
-                #         ET.SubElement(url, "loc").text = full_url
-                #         ET.SubElement(url, "lastmod").text = attributes.get('updatedAt', datetime.now().isoformat())
-                #
-                #     # 处理 tags
-                #     tags_data = attributes.get("tags", {}).get("data", [])
-                #     print(f"tags_data:{tags_data}")
-                #     for tag in tags_data:
-                #         tag_name = tag.get("attributes").get("tag_name")
-                #         print(tag_name)
-                #         if tag_name:
-                #             unique_tags.add(tag_name)  # 自动去重
+                if content_type == 'blogs':
+                    slug = attributes.get('slug')
+                    if slug:
+                        full_url = CONFIG['site_url'] + config['url_pattern'].format(slug=slug)
+                        url = ET.SubElement(urlset, "url")
+                        ET.SubElement(url, "loc").text = full_url
+                        ET.SubElement(url, "lastmod").text = attributes.get('updatedAt', datetime.now().isoformat())
+
+                    # 处理 tags
+                    tags_data = attributes.get("tags", {}).get("data", [])
+                    print(f"tags_data:{tags_data}")
+                    for tag in tags_data:
+                        tag_name = tag.get("attributes").get("tag_name")
+                        print(tag_name)
+                        if tag_name:
+                            unique_tags.add(tag_name)  # 自动去重
 
                 # 处理 `/city/{name_en}?country={country}`
                 if content_type == 'areas':
