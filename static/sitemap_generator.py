@@ -123,7 +123,7 @@ def generate_sitemap():
                         url = ET.SubElement(urlset, "url")
                         ET.SubElement(url, "loc").text = full_url
                         ET.SubElement(url, "lastmod").text = attributes.get('updatedAt', datetime.now().isoformat())
-                
+
                     # 处理 tags
                     tags_data = attributes.get("tags", {}).get("data", [])
                     print(f"tags_data:{tags_data}")
