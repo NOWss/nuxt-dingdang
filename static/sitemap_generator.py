@@ -11,6 +11,7 @@ CONFIG = {
     "strapi_base_url": "http://newcms.dingdang.tw/api",
     "site_url": "https://dingdang.tw",
     "output_path": "/www/wwwroot/dingdang.tw/nuxt-dingdang/static/sitemapAreaCode.xml",  # 网站地图输出路径
+    # "output_path": "./sitemapAreaCode.xml",  # 网站地图输出路径
     "static_routes": ["/", "/check", "/area-code", "/download","/blog"],
     "content_types": {
         "areas": {
@@ -36,6 +37,10 @@ logging.basicConfig(
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
 
+# 修改日期格式
+def get_current_iso_date():
+    # 使用 UTC 时区的格式
+    return datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%S+00:00')
 
 def fetch_all_strapi_data(content_type, filters=None):
     """分页获取 Strapi 过滤后的数据"""
@@ -100,7 +105,7 @@ def generate_sitemap():
         for route in CONFIG['static_routes']:
             url = ET.SubElement(urlset, "url")
             ET.SubElement(url, "loc").text = f"{CONFIG['site_url']}{route}"
-            ET.SubElement(url, "lastmod").text = datetime.now().isoformat()
+            ET.SubElement(url, "lastmod").text = get_current_iso_date()  # 修改为正确格式
             ET.SubElement(url, "changefreq").text = "weekly"
             ET.SubElement(url, "priority").text = "1.0"
 
@@ -122,7 +127,7 @@ def generate_sitemap():
                         full_url = CONFIG['site_url'] + config['url_pattern'].format(slug=slug)
                         url = ET.SubElement(urlset, "url")
                         ET.SubElement(url, "loc").text = full_url
-                        ET.SubElement(url, "lastmod").text = attributes.get('updatedAt', datetime.now().isoformat())
+                        ET.SubElement(url, "lastmod").text = get_current_iso_date()  # 修改为正确格式
 
                     # 处理 tags
                     tags_data = attributes.get("tags", {}).get("data", [])
@@ -144,8 +149,7 @@ def generate_sitemap():
                                 full_url = f"{CONFIG['site_url']}/city/{name_en}?country={name}"
                                 url = ET.SubElement(urlset, "url")
                                 ET.SubElement(url, "loc").text = full_url
-                                ET.SubElement(url, "lastmod").text = attributes.get('updatedAt',
-                                                                                    datetime.now().isoformat())
+                                ET.SubElement(url, "lastmod").text = get_current_iso_date()  # 修改为正确格式
 
         # 生成 `/blog-detail/{tags}`
         for tag in unique_tags:
@@ -153,7 +157,7 @@ def generate_sitemap():
             full_url = f"{CONFIG['site_url']}/blog?tag={tag}"
             url = ET.SubElement(urlset, "url")
             ET.SubElement(url, "loc").text = full_url
-            ET.SubElement(url, "lastmod").text = datetime.now().isoformat()
+            ET.SubElement(url, "lastmod").text = get_current_iso_date()  # 修改为正确格式
 
         # 生成格式化 XML
         xml_str = ET.tostring(urlset, encoding='utf-8')
