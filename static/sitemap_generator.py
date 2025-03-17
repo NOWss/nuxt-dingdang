@@ -20,7 +20,7 @@ CONFIG = {
             "filters": {"filters[type][$eq]": "countrys"}  # 添加过滤条件
         },
         "blogs": {
-            "url_pattern": "/blogs/{slug}",
+            "url_pattern": "/blog-details/{slug}",
             "field_path": ["attributes", "slug"],  # 直接取 attributes.slug
         }
     },

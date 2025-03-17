@@ -13,7 +13,7 @@
           <div class="banner-one__content">
             <v-card>
               <v-card-title>
-                {{ $route.query.country }}城市区号&nbsp;&nbsp;
+                {{ $route.query.country || $route.params.city }}城市区号&nbsp;&nbsp;
                 <v-spacer>
                   <nuxt-link to="/area-code">
                     返回
