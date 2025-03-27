@@ -83,6 +83,7 @@ export default {
         },
         {text: '国家代码', value: 'code', sortable: false,},
         {text: '国家区号', value: 'areaCode', sortable: false,},
+        {text:'国家时区',value:'time', sortable: false},
         {text: '详情', value: 'actions', sortable: false},
       ],
       desserts: [],
