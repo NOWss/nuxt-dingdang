@@ -35,22 +35,17 @@
                 @page-count="pageCount = $event"
                 :page.sync="page"
                 hide-default-footer
-                 style="min-height: 538px;"
+                style="min-height: 538px;"
               >
                 <!--                <template v-slot:item.name="{ item }">-->
                 <!--                  <div>-->
                 <!--                    <span>{{ item.name }}</span>-->
                 <!--                  </div>-->
                 <!--                </template>-->
-                <template v-slot:item.actions="{ item }">
-                  <nuxt-link :to="`/city/${item.name_en}`">
-                    <v-btn
-                      depressed
-                      color="primary"
-                    >
-                      查看
-                    </v-btn>
-                  </nuxt-link>
+                <template v-slot:item.zh_name="{ item }">
+                  <span v-if="item.city == item.zh_name">{{ item.zh_name }}</span>
+                  <span v-else>{{ item.zh_name }}<span
+                    style="color: #999;font-size: 12px;">（{{ item.city }}）</span></span>
                 </template>
               </v-data-table>
               <v-pagination
@@ -58,7 +53,8 @@
                 :length="pageCount"
                 :total-visible="7"
                 circle
-              ></v-pagination>
+              >
+              </v-pagination>
             </v-card>
           </div><!-- /.banner-one__content -->
         </div><!-- /.col-lg-6 -->
@@ -85,7 +81,7 @@ export default {
           sortable: false,
           value: 'zh_name',
         },
-        {text:'城市邮编',value:"postcode", sortable: false},
+        {text: '城市邮编', value: "postcode", sortable: false},
         {text: '城市区号', value: 'area_code', sortable: false, width: 100},
       ],
       desserts: [],
