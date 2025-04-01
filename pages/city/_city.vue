@@ -62,6 +62,12 @@ export default {
           name: 'description',
           content: "叮当助手（全球号）为您提供免费、精准、便捷的全球地区代码查询服务，助您轻松获取全球国家任意地区的地区代码信息。"
         }
+      ],
+      link: [
+        {
+          rel:'canonical',
+          href:`https://dingdang.tw/city/${this.$route.params.city}?country=${this.$route.query.country}`
+        }
       ]
     }
   }

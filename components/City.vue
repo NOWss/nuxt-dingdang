@@ -91,7 +91,6 @@ export default {
     }
   },
   mounted() {
-    console.log(this.areas)
     if (this.areas) {
       this.desserts = this.areas
     } else {
