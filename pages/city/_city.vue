@@ -17,7 +17,7 @@ export default {
     Footer,
     City
   },
-  async asyncData({$config, params, error}) {
+  async asyncData({$config, params,query, error}) {
     try {
       let areas
       const apiBase = $config.API_BASE;
@@ -36,13 +36,14 @@ export default {
       }
       const dataRaw = await response.json();
       areas = dataRaw.data[0].attributes.json.filter(item => item.country == params.city);
+      const countryName = query.country;
       if (!areas) {
         console.error(`找不到匹配的数据`);
         error({statusCode: 404, message: '无法找到这篇内容'});
         return; // 提前终止
       }
 
-      return {areas: areas};
+      return {areas: areas,countryName:countryName};
 
     } catch (err) {
       console.error('Strapi API 请求失败:', err);
@@ -50,7 +51,7 @@ export default {
   },
   head() {
     return {
-      title: `${this.$route.query.country || this.$route.params.city}代码查询-叮当助手（全球号）-dingdang`,
+      title: `${this.countryName}代码查询-叮当助手（全球号）-dingdang`,
       meta: [
         {
           hid: 'keywords',
